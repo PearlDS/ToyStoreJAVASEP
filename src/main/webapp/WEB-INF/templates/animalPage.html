@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>them animals</title>
+</head>
+<body>
+
+
+<div th:each="animal:${animals}">
+
+    <p> Name:</p>
+    <p th:text="${animal.name}"></p>
+    <p> Country:</p>
+    <p th:text="${animal.country}"></p>
+    <p> Price:</p>
+    <p >$ [[${animal.price}]]</p>
+    <p> ImageLink:</p>
+    <img th:src="@{/images/{image}(image=${animal.link})}">
+
+    <hr>
+
+</div>
+
+
+</body>
+</html>
